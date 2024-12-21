@@ -21,3 +21,7 @@ layout_mode = 2
 [node name="Paladin" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Character"
+
+[node name="Paladin2" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Character"
