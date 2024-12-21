@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Dark Menagerie"
-run/main_scene="res://scenes/main_menu.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+run/main_scene="res://src/scenes/main_menu.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://src/lib/global/globals.gd"
 
 [editor]
 

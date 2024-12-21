@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://725kudr25j15"]
+
+[ext_resource type="Texture2D" uid="uid://b2v52613v3uka" path="res://src/art/playerGrey_up1.png" id="1_syyq7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwa7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_syyq7")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7x1n3"]
+radius = 27.0
+height = 68.0
+
+[node name="Enemy" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.890196, 0, 0, 1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pwa7j")
+animation = &"standing"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7x1n3")

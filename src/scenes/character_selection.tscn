@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvwppvy6fs00m"]
+
+[ext_resource type="Script" path="res://src/lib/controllers/ui/menus/character_selection.gd" id="1_6hnby"]
+
+[node name="character_selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6hnby")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 554.0
+offset_right = 582.0
+offset_bottom = 594.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Paladin" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Paladin"
+
+[node name="Wizard" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wizard"
+
+[node name="Archer" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Archer"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Paladin" to="." method="_on_paladin_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Wizard" to="." method="_on_wizard_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Archer" to="." method="_on_archer_pressed"]

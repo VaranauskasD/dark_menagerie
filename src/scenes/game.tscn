@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnb85nd6s4r5"]
+
+[ext_resource type="Script" path="res://src/lib/controllers/core/gameController.gd" id="1_skp4j"]
+[ext_resource type="PackedScene" uid="uid://byyojfgx4cspi" path="res://src/scenes/player.tscn" id="1_wiwh5"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_skp4j")
+
+[node name="Player" parent="." instance=ExtResource("1_wiwh5")]
+position = Vector2(127, 281)
