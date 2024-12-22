@@ -16,7 +16,7 @@ func _init():
 	# Offensive stats
 	self.attack_power = 4
 	self.magic_power = 6
-	self.critical_chance = 0.3
+	self.critical_chance = 0.2
 
 	# Defensive stats
 	self.defense = 6
